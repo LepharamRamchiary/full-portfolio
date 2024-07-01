@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 require('dotenv').config()
 const cors = require('cors');
+const path = require('path')
 
 const app = express();
 const port = 3001;
@@ -10,6 +11,8 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
+
+app.use(express.static(path.join(__dirname + "/public")))
 
 // Endpoint to handle form submission and send email
 app.post('/backend/sendEmail', async (req, res) => {
