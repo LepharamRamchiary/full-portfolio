@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node beckend/index.js",
-    "dev": "nodemon beckend/index.js",
-    "build": "npm install && npm install --prefix myProtfolio && npm run build --prefix myProtfolio"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
