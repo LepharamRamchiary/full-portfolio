@@ -49,7 +49,7 @@ const Form = () => {
                 <label>Your Name</label>
                 <input type='text' name='name' value={formData.name} onChange={handleChange} required />
 
-                <label>Email</label>
+                <label>Your Email</label>
                 <input type='email' name='email' value={formData.email} onChange={handleChange} required />
 
                 <label>Subject</label>
