@@ -12,7 +12,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-app.use(express.static(path.join(__dirname + "/public")))
+app.use(express.static(path.join(__dirname + "/myPortfolio/build")))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "myPortfolio", "build", "index.html"))
+})
 
 // Endpoint to handle form submission and send email
 app.post('/backend/sendEmail', async (req, res) => {
@@ -32,7 +36,7 @@ app.post('/backend/sendEmail', async (req, res) => {
         const info = await transporter.sendMail({
             from: `${name} <${process.env.USER}>`,
             replyTo: email,
-            to: process.env.USER, 
+            to: process.env.USER,
             subject: subject,
             text: message,
         });
