@@ -7,6 +7,7 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
+//middewere
 app.use(bodyParser.json());
 app.use(cors());
 
