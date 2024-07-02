@@ -17,7 +17,7 @@ const Form = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/backend/sendEmail', {
+            const response = await fetch('https://full-portfolio.onrender.com/backend/sendEmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
